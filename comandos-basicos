@@ -30,3 +30,16 @@ docker ps -aq
 
 10 Borrar todos los contenedores
 docker rm $(docker ps -aq)
+
+11 Descargar/ejecutar y entrar una shell de un container de alguna distribucion linux
+docker run -it ubuntu
+
+12 Ejecutar un comando en un contenedor existente
+docker exec containerName/ID command
+
+13 Matar el proceso de un contenedor
+docker kill containerName/ID
+
+14 Forzar la eliminacion de un contenedor
+docker rm -f contaninerName/ID 
+
