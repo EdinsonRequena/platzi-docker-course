@@ -43,3 +43,6 @@ docker kill containerName/ID
 14 Forzar la eliminacion de un contenedor
 docker rm -f contaninerName/ID 
 
+15 Si el contenedor que se ejecutará tiene un proceso con output o en modo interactivo, lo deshabilita.
+docker run -d containerName
+
