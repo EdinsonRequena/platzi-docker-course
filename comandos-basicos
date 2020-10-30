@@ -1,3 +1,6 @@
+0 Descargar y ejecutar un contenedor
+docker run containerName
+
 1 Listar contendores en ejecucion
 docker ps
 
