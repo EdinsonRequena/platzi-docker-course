@@ -1,0 +1,5 @@
+1 Descargar/Ejecutar en modo detach, con el nombre 'server' el servidor (en esta caso nginx)
+docker run -d --name server nginx
+
+2 Para ejecutar nginx en un puerto especifico de tu computadora tenemos que "atar" un puerto de tu computadora con un puerto del contenedor nginx. Esto lo hacemos con con el flag -p de la siguiente manera: -p myPcPort:nginxPort
+docker run -d --name server -p 3000:80 nginx 
