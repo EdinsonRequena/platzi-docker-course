@@ -1,0 +1,7 @@
+Las imágenes son un componente fundamental de Docker y sin ellas los contenedores no tendrían sentido. Estas imágenes son fundamentalmente plantillas o templates.
+Algo que debemos tener en cuenta es que las imágenes no van a cambiar, es decir, una vez este realizada no la podremos cambiar
+
+1) Descargar una imagen
+docker pull imageName
+
+Las imagenes funcionas por capas, estas capas son inmutables. Siempre que queramos descargar una nueva imagen docker revisara si es imagen tiene capas que ya existan, de ser asi usara esa capaz existentes y descargara unicamente las necesarias
