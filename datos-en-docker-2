@@ -1,0 +1,13 @@
+1) Una manera mas actual y segura de persistir los datos en el contenedor que la anterior manera.
+
+2) Crear un nuevo volume para nuestros datos.
+docker volume create nombreVolume
+
+3) Visualizar el volume que acabamos de crear.
+docker volume ls
+
+4) Crear una basa de datos persistente en donde los datos se guarden en el volume anteriormente creado.
+docker run -d --name db --mount src=nombreVolume,dst=/data/db mongo
+
+De esta forma todo los datos guardados en /data/db quedaran guardados en el volume, nombreVolume.
+Asi podremos persistir los datos sin atarlos a un sistema de archivos de nuestro host.
