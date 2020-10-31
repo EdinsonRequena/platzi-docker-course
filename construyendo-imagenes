@@ -1,0 +1,2 @@
+1) construir nuestra imagen (primera version)
+docker build -t ubuntu:platzi .
