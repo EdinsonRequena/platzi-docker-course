@@ -1,0 +1,8 @@
+1) Descargar/ejecutar mongoDB
+docker run -d --name db mongodb
+
+2) crear contenedor persistente "atado" a un sistema de archivo dentro de nuestro host
+	a) Creamos un directorio dentro de 		   nuestro host
+	   mkdir name_dir
+docker run --name db2 -d -v /Users/eddy/Desktop/name_dir:/data/db mongo
+el comando anterior lo que hace es montar una direccion del sistema de archivos del host con una direccion dentro del contenedor: /Host:/contenedor
