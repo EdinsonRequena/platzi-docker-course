@@ -11,3 +11,5 @@ docker run -d --name db --mount src=nombreVolume,dst=/data/db mongo
 
 De esta forma todo los datos guardados en /data/db quedaran guardados en el volume, nombreVolume.
 Asi podremos persistir los datos sin atarlos a un sistema de archivos de nuestro host.
+
+documentacion: https://docs.docker.com/storage/
