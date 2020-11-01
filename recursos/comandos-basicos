@@ -11,7 +11,7 @@ docker ps -a
 docker inspect id/name
 
 4 Filtrar un dato especifico al inspeccionar
-docker inspect -f '{{jason .datoAInspecionar}}'id/name
+docker inspect -f '{{json .datoAInspecionar}}'id/name
 
 5 Cambiar nombre del contenedor
 docker rename nombreActual nombreNuevo
