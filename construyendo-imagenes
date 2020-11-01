@@ -1,0 +1,17 @@
+1) construir nuestra imagen (primera version)
+docker build -t ubuntu:platzi .
+
+2) Ver la imagen que acabamos de construir (y todas las demas)
+docker image ls
+
+3) Flujo de docker
+Dockerfile -> Imagen -> Contenedor
+
+Al ejecutar build construimos nuestra imagen a partir del Dockerfile y cuando ejecutamos run obtenemos nuestro contendor apartir de la imagen previamente creada.
+
+4) Corremos nuestra imagen
+docker run -it ubuntu:platzi
+
+4) Para subir nuestra imagen a DockerHub hacemos los siguiente
+docker tag ubuntu:platzi myUser/ubuntu:platzi
+docker push myUser/ubuntu:platzi
