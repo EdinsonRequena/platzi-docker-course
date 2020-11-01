@@ -1,0 +1,9 @@
+1) Construir nuestra imagen platziapp
+docker build -t platziapp
+
+2) verificar que tenemos nuestra imagen construida
+docker image ls
+
+3) Corremos el contenedor
+docker run --rm -p 3000:3000 platziapp
+
