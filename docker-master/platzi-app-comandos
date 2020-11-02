@@ -19,3 +19,20 @@ docker network ls
 	  
 	 c)Red None: es similar al dev/null o hoyo negro 		   de los sistemas unix. En este caso nos 		   permite especificar que el contenedor no 		   tiene salida o permiso para acceder o ser 		   accedido por red.
 
+5) Crearemos nuestra red, usaremos el comando --attachable para permitir que otros contenedores se conecten en esta red.
+docker network create --attachable platzinet
+
+6) Descargamos el contendor de mongo.
+docker run -d --name db mongo
+
+7) Conectamos la red anteriormente creada al contenedor de mongo (que tiene por nombre db).
+docker network connect platzinet db
+
+4) Ver que contenedores estas conenctados a nuestra red platzinet y detalles de los mismos.
+docker network inspect platzinet
+
+5) Corremos el contenedor de nuestra aplicacion agregandole una variable de entorno para que no vaya al localhost sino a un puerto dentro de nuestro contenedor.
+docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test platziapp
+
+6) Conectamos nuestra red (platzinet) a nuestro contenedor de la aplicacion (app)
+docker network connect platzinet app
