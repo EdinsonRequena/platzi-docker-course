@@ -7,3 +7,6 @@ docker image ls
 3) Corremos el contenedor
 docker run --rm -p 3000:3000 platziapp
 
+4) Montar nuestro path en el contendor para que se actualice automaticamente cada vez que haya un cambio
+docker rum --rm -p 5000:3000 -v /my/actual/path:/usr/src platziapp
+
