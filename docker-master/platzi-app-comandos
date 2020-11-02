@@ -10,3 +10,12 @@ docker run --rm -p 3000:3000 platziapp
 4) Montar nuestro path en el contendor para que se actualice automaticamente cada vez que haya un cambio
 docker rum --rm -p 5000:3000 -v /my/actual/path:/usr/src platziapp
 
+4) Ver redes disponibles en docker
+docker network ls
+	a)Red Brigde: red por defecto, o red puente, se 		  solia usar con la instrucción link, la cual 	  permitia enlazar contenedores a travez de la 	   red. Sin embargo esta red esta en desuso.
+
+	b)Red Host: Permite que el contenedor use la red 		  por defecto de la maquina host. Es sensible a 		  que si el contendor abre algun puerto, esto se 		  ve replicado en la maquina host, generando asi 		  posibles vulnerabilidades.
+	  ADVERTENCIA el uso de esta interfaz es de 		  cuidado
+	  
+	 c)Red None: es similar al dev/null o hoyo negro 		   de los sistemas unix. En este caso nos 		   permite especificar que el contenedor no 		   tiene salida o permiso para acceder o ser 		   accedido por red.
+
